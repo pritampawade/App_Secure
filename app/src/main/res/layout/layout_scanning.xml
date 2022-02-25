@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rodolfonavalon.shaperipplelibrary.ShapeRipple
+        android:id="@+id/ripple_scanning"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:padding="0dp"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:ripple_stroke_width="18dp" />
+
+    <TextView
+        android:id="@+id/tv_percent"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+
+        android:background="@drawable/bg_circle_primary"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="75%"
+        android:textColor="@color/color_white"
+        android:textSize="20sp"
+        custom:layout_constraintBottom_toBottomOf="@+id/ripple_scanning"
+        custom:layout_constraintEnd_toEndOf="@+id/ripple_scanning"
+        custom:layout_constraintStart_toStartOf="@+id/ripple_scanning"
+        custom:layout_constraintTop_toTopOf="parent" />
+
+    <com.timqi.sectorprogressview.ColorfulRingProgressView
+        android:id="@+id/crpv"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        custom:bgColor="#e1e1e1"
+        custom:fgColorEnd="#ff4800"
+        custom:fgColorStart="#ffe400"
+        custom:layout_constraintBottom_toBottomOf="@+id/ripple_scanning"
+        custom:layout_constraintEnd_toEndOf="@+id/tv_percent"
+        custom:layout_constraintStart_toStartOf="@+id/tv_percent"
+        custom:layout_constraintTop_toTopOf="@+id/ripple_scanning"
+        custom:percent="0"
+        custom:startAngle="0"
+        custom:strokeWidth="18dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

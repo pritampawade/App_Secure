@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rodolfonavalon.shaperipplelibrary.ShapeRipple
+        android:id="@+id/ripple_scannow"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:padding="0dp"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:ripple_stroke_width="18dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_circle_primary"
+        android:clickable="true"
+        android:text="@string/scan_now"
+        android:textColor="@color/color_white"
+        android:textSize="20sp"
+        custom:layout_constraintBottom_toBottomOf="@+id/ripple_scannow"
+        custom:layout_constraintEnd_toEndOf="@+id/ripple_scannow"
+        custom:layout_constraintStart_toStartOf="@+id/ripple_scannow"
+        custom:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_error"
+        android:title="@string/insecure_apps"
+        android:icon="@drawable/ic_error"/>
+
+    <item
+        android:id="@+id/menu_warn"
+        android:title="@string/running_apps"
+        android:icon="@drawable/ic_running"/>
+
+    <item
+        android:id="@+id/menu_all"
+        android:title="@string/all_apps"
+        android:icon="@drawable/ic_security"/>
+
+
+
+</menu>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App Secure</string>
+    <string name="all_apps">All Apps</string>
+    <string name="security_warnings">warnings</string>
+    <string name="insecure_apps">Threats</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="scanning_app">Scanning app: %1$s</string>
+    <string name="scan_again">Scan Again</string>
+    <string name="running_apps">Running apps</string>
+    <string name="scan_now">Scan Now</string>
+</resources>

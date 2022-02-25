@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".fragments.InsecureAppsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.InsecureAppsFragment">
+
+
+        <include
+            android:id="@+id/inc_scannow"
+            layout="@layout/layout_scannow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/inc_scanning"
+            layout="@layout/layout_scanning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_current_scan"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_all_apps"
+            custom:layout_constraintBottom_toBottomOf="@+id/inc_scanning"
+            custom:layout_constraintStart_toStartOf="@+id/inc_scanning" />
+
+        <TextView
+            android:id="@+id/tv_current_app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:text="@string/scanning_app"
+            android:textColor="@color/color_secondary"
+            custom:layout_constraintBottom_toBottomOf="@+id/iv_current_scan"
+            custom:layout_constraintEnd_toEndOf="@+id/inc_scanning"
+            custom:layout_constraintStart_toEndOf="@+id/iv_current_scan"
+            custom:layout_constraintTop_toTopOf="@+id/iv_current_scan" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="328dp"
+            android:text="@string/insecure_apps"
+            android:textColor="#393939"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_insecure_apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingTop="16dp"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:itemCount="3"
+            tools:listitem="@layout/layout_app_item" />
+
+        <include
+            android:id="@+id/inc_empty"
+            layout="@layout/layout_empty"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
