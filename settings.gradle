@@ -15,7 +15,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "App Secure"
 include ':app'
-include ':bottomnav'
 include ':lib'
 include ':ShapeRippleLibrary'
 include ':circularprogress'
